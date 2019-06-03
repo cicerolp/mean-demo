@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <h1 class="display-3">Seja bem-vindo!</h1>
+  <p class="lead">The House Store, a melhor loja do Campus.</p>
+</div>
+
+<div class="row">
+  <div class="col-6 col-lg-4" *ngFor="let elt of itens">
+    <h2>{{elt.name}}</h2>
+    <img src="./../assets/products/{{elt.img}}.png" class="img-fluid" alt="Moto G5">
+    <p class="text-ellipsis">{{elt.description}}</p>
+
+    <p><a class="btn btn-secondary" role="button" [routerLink]="['/detail', elt._id]">Ver detalhes &raquo;</a></p>
+  </div>
+</div>

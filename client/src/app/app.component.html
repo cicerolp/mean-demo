@@ -1,0 +1,91 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">{{ title }}</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/search']"
+            >Procura <i class="fa fa-shopping-cart" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+  <div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+      <div class="col-12 col-md-9">
+        <router-outlet></router-outlet>
+      </div>
+
+      <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+            <i class="fa fa-mobile fa-fw" aria-hidden="true"></i>&nbsp;Celulares
+            e Telefonia Fixa
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-laptop fa-fw" aria-hidden="true"></i
+            >&nbsp;Informática e Tablets
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-tv fa-fw" aria-hidden="true"></i>&nbsp;TV, Áudio e
+            Home Theater
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-tag fa-fw" aria-hidden="true"></i
+            >&nbsp;Eletrodomésticos
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-battery-full fa-fw" aria-hidden="true"></i
+            >&nbsp;Eletroportáteis
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Móveis e
+            Decoração
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-bath fa-fw" aria-hidden="true"></i>&nbsp;Moda,
+            Beleza e Perfumaria
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-gamepad fa-fw" aria-hidden="true"></i>&nbsp;Games,
+            Livros e Filmes
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-car fa-fw" aria-hidden="true"></i>&nbsp;Automotivo
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-venus-mars fa-fw" aria-hidden="true"></i
+            >&nbsp;Brinquedos e Bebês
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <footer>
+      <p>2019 &copy; Sidia: Institute of Science and Technology</p>
+      <i class="fa fa-cc-visa fa-4x" aria-hidden="true"></i>
+      <i class="fa fa-cc-mastercard fa-4x" aria-hidden="true"></i>
+      <i class="fa fa-cc-paypal fa-4x" aria-hidden="true"></i>
+    </footer>
+  </div>
+</main>

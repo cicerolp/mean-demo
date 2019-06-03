@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
+      "runtimeExecutable": "/usr/bin/google-chrome-stable",
+      "runtimeArgs": [
+        "--disable-session-crashed-bubble"
+      ]
+    }
+  ]
+}

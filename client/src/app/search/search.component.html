@@ -1,0 +1,24 @@
+<input #searchBox class="form-control mr-sm-2" type="text" placeholder="Procurar" (keyup)="search(searchBox.value)">
+
+<hr>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elt of itens | async" [routerLink]="['/detail', elt._id]">
+        <td scope="row">{{elt._id}}</td>
+        <td>{{elt.name}}</td>
+        <td>{{elt.description}}</td>
+        <td>{{elt.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

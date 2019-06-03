@@ -1,0 +1,69 @@
+<div *ngIf="elt">
+  <div class="jumbotron">
+    <div class="container">
+
+      <ngb-rating [(rate)]="elt.rating" max="10">
+        <ng-template let-fill="fill">
+          <span class="star" [class.filled]="fill === 100">&#9733;</span>
+        </ng-template>
+      </ngb-rating>
+
+      <h1 class="display-5">{{elt.name}}</h1>
+      <p>{{elt.description}}</p>
+      <p class="lead">Apenas R$ {{elt.price}},00</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Informações técnicas</h2>
+
+        <table class="table table-hover">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Propriedade</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Código</th>
+              <td>{{elt._id}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Id da Imagem</th>
+              <td><input type="number" [(ngModel)]="elt.img" class="form-control"></td>
+            </tr>
+            <tr>
+              <th scope="row">Nome</th>
+              <td><input type="text" [(ngModel)]="elt.name" class="form-control"></td>
+            </tr>
+            <tr>
+              <th scope="row">Preço</th>
+              <td><input type="number" [(ngModel)]="elt.price" class="form-control"></td>
+            </tr>
+            <tr>
+              <th scope="row">Descrição</th>
+              <td><input type="text" [(ngModel)]="elt.description" class="form-control"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <a class="btn btn-block btn-success" href="#" role="button">
+            <i class="fa fa-check-square-o" aria-hidden="true"></i> Adicionar ao carrinho
+          </a>
+        </p>
+        <p>
+          <a class="btn btn-outline-warning float-right" (click)="goBack()" role="button">Voltar</a>
+          <a class="btn btn-warning" (click)="copy()" role="button">Copy</a>
+          <a class="btn btn-danger" (click)="delete()" role="button">Delete</a>
+          <a class="btn btn-success" (click)="update()" role="button">Update</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <img src="./../assets/products/{{elt.img}}.png" class="img-fluid" alt="{{elt.name}}">
+      </div>
+    </div>
+  </div>
+</div>

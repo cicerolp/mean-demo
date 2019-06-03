@@ -5,7 +5,6 @@
 - NodeJS
 - NPM
 - MongoDB or MySQL
-    - Select the correct routes in 
 
 ### How to Download JS Packages
 
